@@ -1,0 +1,1 @@
+查看Swift版本xcrun swift -version
