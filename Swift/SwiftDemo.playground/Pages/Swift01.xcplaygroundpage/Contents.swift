@@ -53,3 +53,5 @@ print(name4)
 
 var (_,name5) = (1,"name5") // _忽略
 print(name5)
+
+
