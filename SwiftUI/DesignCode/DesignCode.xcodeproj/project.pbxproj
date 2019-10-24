@@ -14,6 +14,7 @@
 		2B51C4212360A66400B9F178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B51C4202360A66400B9F178 /* Assets.xcassets */; };
 		2B51C4242360A66400B9F178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B51C4232360A66400B9F178 /* Preview Assets.xcassets */; };
 		2B51C4272360A66400B9F178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B51C4252360A66400B9F178 /* LaunchScreen.storyboard */; };
+		811BED62236179B400DBEFEB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BED61236179B400DBEFEB /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		2B51C4232360A66400B9F178 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B51C4262360A66400B9F178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B51C4282360A66400B9F178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		811BED61236179B400DBEFEB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		811BED63236197EE00DBEFEB /* DesignCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCode.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +61,11 @@
 		2B51C4162360A66200B9F178 /* DesignCode */ = {
 			isa = PBXGroup;
 			children = (
+				811BED63236197EE00DBEFEB /* DesignCode.entitlements */,
 				2B51C4172360A66200B9F178 /* AppDelegate.swift */,
 				2B51C4192360A66200B9F178 /* SceneDelegate.swift */,
 				2B51C41E2360A66200B9F178 /* ContentView.swift */,
+				811BED61236179B400DBEFEB /* Home.swift */,
 				2B51C4202360A66400B9F178 /* Assets.xcassets */,
 				2B51C4252360A66400B9F178 /* LaunchScreen.storyboard */,
 				2B51C4282360A66400B9F178 /* Info.plist */,
@@ -151,6 +156,7 @@
 			files = (
 				2B51C41D2360A66200B9F178 /* DesignCode.xcdatamodeld in Sources */,
 				2B51C4182360A66200B9F178 /* AppDelegate.swift in Sources */,
+				811BED62236179B400DBEFEB /* Home.swift in Sources */,
 				2B51C41F2360A66200B9F178 /* ContentView.swift in Sources */,
 				2B51C41A2360A66200B9F178 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,8 +294,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesignCode/DesignCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
+				DEVELOPMENT_TEAM = Q69ZU2Y8Q5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -298,6 +307,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sr.dev.DesignCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,8 +317,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesignCode/DesignCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
+				DEVELOPMENT_TEAM = Q69ZU2Y8Q5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,6 +330,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sr.dev.DesignCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
