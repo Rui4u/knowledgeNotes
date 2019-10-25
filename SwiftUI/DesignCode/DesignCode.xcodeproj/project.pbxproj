@@ -15,6 +15,11 @@
 		2B51C4242360A66400B9F178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B51C4232360A66400B9F178 /* Preview Assets.xcassets */; };
 		2B51C4272360A66400B9F178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B51C4252360A66400B9F178 /* LaunchScreen.storyboard */; };
 		811BED62236179B400DBEFEB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BED61236179B400DBEFEB /* Home.swift */; };
+		81CC2F13236291760039373F /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2F12236291760039373F /* HomeList.swift */; };
+		81CC2F152362C2800039373F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2F142362C2800039373F /* BlurView.swift */; };
+		81CC2F262362E13F0039373F /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2F252362E13F0039373F /* UpdateList.swift */; };
+		81CC2F282362ECB10039373F /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2F272362ECB10039373F /* UpdateDetail.swift */; };
+		81CC2F2A2362F07D0039373F /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CC2F292362F07D0039373F /* UpdateStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		2B51C4282360A66400B9F178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		811BED61236179B400DBEFEB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		811BED63236197EE00DBEFEB /* DesignCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCode.entitlements; sourceTree = "<group>"; };
+		81CC2F12236291760039373F /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
+		81CC2F142362C2800039373F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		81CC2F252362E13F0039373F /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		81CC2F272362ECB10039373F /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		81CC2F292362F07D0039373F /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +75,12 @@
 				2B51C4172360A66200B9F178 /* AppDelegate.swift */,
 				2B51C4192360A66200B9F178 /* SceneDelegate.swift */,
 				2B51C41E2360A66200B9F178 /* ContentView.swift */,
+				81CC2F252362E13F0039373F /* UpdateList.swift */,
+				81CC2F292362F07D0039373F /* UpdateStore.swift */,
+				81CC2F272362ECB10039373F /* UpdateDetail.swift */,
 				811BED61236179B400DBEFEB /* Home.swift */,
+				81CC2F12236291760039373F /* HomeList.swift */,
+				81CC2F142362C2800039373F /* BlurView.swift */,
 				2B51C4202360A66400B9F178 /* Assets.xcassets */,
 				2B51C4252360A66400B9F178 /* LaunchScreen.storyboard */,
 				2B51C4282360A66400B9F178 /* Info.plist */,
@@ -154,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CC2F13236291760039373F /* HomeList.swift in Sources */,
+				81CC2F152362C2800039373F /* BlurView.swift in Sources */,
+				81CC2F282362ECB10039373F /* UpdateDetail.swift in Sources */,
+				81CC2F262362E13F0039373F /* UpdateList.swift in Sources */,
 				2B51C41D2360A66200B9F178 /* DesignCode.xcdatamodeld in Sources */,
 				2B51C4182360A66200B9F178 /* AppDelegate.swift in Sources */,
+				81CC2F2A2362F07D0039373F /* UpdateStore.swift in Sources */,
 				811BED62236179B400DBEFEB /* Home.swift in Sources */,
 				2B51C41F2360A66200B9F178 /* ContentView.swift in Sources */,
 				2B51C41A2360A66200B9F178 /* SceneDelegate.swift in Sources */,
@@ -296,7 +316,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DesignCode/DesignCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = Q69ZU2Y8Q5;
 				ENABLE_PREVIEWS = YES;
@@ -307,7 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sr.dev.DesignCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,7 +338,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DesignCode/DesignCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = Q69ZU2Y8Q5;
 				ENABLE_PREVIEWS = YES;
@@ -330,7 +348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sr.dev.DesignCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

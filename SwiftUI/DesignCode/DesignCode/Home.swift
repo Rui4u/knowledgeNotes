@@ -15,9 +15,11 @@ struct Home: View {
     var body: some View {
         
         ZStack {
-            
+            HomeList()
+                .blur(radius: show ? 20 : 0)
+                .scaleEffect(showProfile ? 0.95 : 1)
+                .animation(.default)
             ContentView()
-                .background(Color.white)
                 .cornerRadius(30.0)
                 .shadow(radius: 30)
                 .animation(.spring())
@@ -30,7 +32,7 @@ struct Home: View {
             
             MenuRight(show: $showProfile)
                 .animation(.spring())
-                .offset(y: showProfile ? 0 : 88)
+                .offset(x:-15, y: showProfile ? 0 : 88)
             
             MenuView(show: $show)
         }
@@ -134,7 +136,7 @@ struct MenuButton: View {
                     .frame(width: 90, height: 60)
                     .background(Color.white)
                     .cornerRadius(30)
-                    .shadow(radius: 20)
+                    .shadow(radius: 20, y: 10)
                 }
                 Spacer()
             }
