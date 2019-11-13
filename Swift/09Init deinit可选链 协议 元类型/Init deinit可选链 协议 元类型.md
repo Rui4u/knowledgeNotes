@@ -104,6 +104,10 @@ class Persion: Drawable {
 
 协议中必须使用`static`修饰类型方法、类型属性、类型下标。（为了保证协议在`class`和`struct`中通用）
 
+### associatedtype
+
+在协议中添加泛型
+
 ### mutating 
 
 如果修饰值类型需要用mutating修饰

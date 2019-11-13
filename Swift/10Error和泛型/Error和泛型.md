@@ -170,3 +170,7 @@ where S1.Element == S2.Element, S1.Element: Hashable  //添加复杂限定。S1�
 
 1. `some` 只返回一种类型， 这样编译器就知道了具体是哪种
 2. 通过给方法设置泛型，然后再定义的时候确定泛型，这样编译器就知道返回哪种
+
+### FatalError
+
+如果想程序不符合就崩溃 无法捕捉的话  就用FatalError
