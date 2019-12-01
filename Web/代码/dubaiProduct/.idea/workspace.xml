@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5b38e97b-e1ae-4709-a54a-e0a9e8cd1130" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UMgw54i3SBX863PwrP9z1nc7Fn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="directory.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dubaiProduct/directory.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dubaiProduct/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.directory.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b38e97b-e1ae-4709-a54a-e0a9e8cd1130" name="Default Changelist" comment="" />
+      <created>1575172113232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575172113232</updated>
+      <workItem from="1575172114461" duration="16196000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-884" y="278" key="#Inspections" timestamp="1575182991404">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-884" y="278" key="#Inspections/-1920.23.1920.1057/0.23.1680.965@-1920.23.1920.1057" timestamp="1575182991404" />
+    <state x="-961" y="395" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575204291864">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-961" y="395" key="#com.intellij.fileTypes.FileTypeChooser/-1920.23.1920.1057/0.23.1680.963@-1920.23.1920.1057" timestamp="1575204291864" />
+    <state x="-1200" y="208" key="SettingsEditor" timestamp="1575173873232">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1200" y="208" key="SettingsEditor/-1920.23.1920.1057/0.23.1680.966@-1920.23.1920.1057" timestamp="1575173873232" />
+    <state x="-995" y="255" width="670" height="158" key="search.everywhere.popup" timestamp="1575184753287">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-995" y="255" width="670" height="158" key="search.everywhere.popup/-1920.23.1920.1057/0.23.1680.965@-1920.23.1920.1057" timestamp="1575184753287" />
+    <state x="-995" y="255" width="670" height="158" key="search.everywhere.popup/-1920.23.1920.1057/0.23.1680.966@-1920.23.1920.1057" timestamp="1575176578331" />
+  </component>
+</project>
