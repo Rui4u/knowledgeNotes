@@ -214,3 +214,34 @@ class Person : Runnable {
 class Studend : Person{}
 ```
 
+
+
+### 只能被Class继承的类
+
+1. 协议继承于AnyObject ` protocol name :AnyObject {} `
+2. 协议继承于class  `@objc protocol name {} `
+3. protocol通过objc修饰  `@objc protocol name {} `
+
+### 可选协议
+
+1. 通过@objc添加可选协议
+	 ```swift
+	@objc protocol name {
+		func test()
+  	@objc optional func test()
+	} `
+	```
+
+2. 通过 extension 实现空方法 来达到可选目的
+
+   ```swift
+   @objc protocol protocolName {
+   	func test()
+	func test1()
+   } 
+   class abc {
+   	func test(){}
+   }
+   ```
+   
+   
