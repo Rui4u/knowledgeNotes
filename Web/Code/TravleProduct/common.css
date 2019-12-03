@@ -2,3 +2,13 @@
     margin: 0;
     padding: 0;
 }
+
+button {
+    border: 0px;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+}

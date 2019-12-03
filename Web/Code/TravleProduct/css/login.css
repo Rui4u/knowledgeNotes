@@ -1,17 +1,32 @@
-header {
+body {
   width: 100%;
-  height: 260px;
-  background: url(../img/loginheader.png) no-repeat;
+  height: 100%;
+  background: url(../img/login-bg.png);
+  max-width: 700px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 257.4px;
+  background: url(../img/login-header.png) no-repeat;
   background-size: 100%;
+}
+header .slogan {
+  width: 200px;
+  height: 89.63px;
+  background: url(../img/slogan.png) no-repeat;
+  background-size: 100%;
+  align-self: flex-end;
 }
 .login {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
+  width: 260px;
   height: 200px;
-  background-color: yellowgreen;
   align-items: center;
+  margin: auto;
 }
 .login ul {
   display: flex;
@@ -26,26 +41,40 @@ header {
   flex-direction: row;
   width: 100%;
   margin-bottom: 10px;
+  align-items: center;
+  height: 30px;
 }
 .login ul label {
-  width: 35%;
+  height: 22px;
+  width: 60px;
   text-align: right;
   margin-right: 10px;
 }
+.login ul input {
+  width: 155.3px;
+  height: 30px;
+  background: url(../img/login-text-bg.png) no-repeat;
+  background-size: 100%;
+  border: 0px;
+  padding: 0px 10px;
+}
 .subBtn {
-  width: 210px;
-  height: 40px;
-  background-color: pink;
+  width: 201.39px;
+  height: 30px;
   margin: auto;
 }
-.subBtn input {
+.subBtn button {
   width: 100%;
   height: 100%;
+  background: url(../img/login-button.png) no-repeat;
+  background-size: 100%;
 }
 footer {
   position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 200px;
-  background: url(../img/loginfooter.png) no-repeat;
+  height: 245.25px;
+  background: url(../img/login-footer.png) no-repeat;
   background-size: 100%;
+  z-index: -1;
 }
