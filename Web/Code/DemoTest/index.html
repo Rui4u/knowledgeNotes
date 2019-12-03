@@ -1,56 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
         table,
         td,
-        th{
+        th {
             border: 1px solid deeppink;
-            border-collapse: collapse; /*合并单元格的线宽*/
+            border-collapse: collapse;
+            /*合并单元格的线宽*/
+        }
+        
+        .adddiv {
+            width: 50px;
+            ;
+            height: 100px;
+            background-color: pink;
         }
     </style>
+    <script>
+        alert("呵呵");
+    </script>
 </head>
-<body>
-<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575183757419&di=e41bb2c9d8228accc2d822fbaac6428b&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201312%2F04%2F20131204184148_hhXUT.jpeg" title="哈哈哈"/>
-<a href="#ss"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
-<a id="ss" href="https://www.baidu.com"> 哈哈哈 </a><br/>
+
+<body id="boddy">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575183757419&di=e41bb2c9d8228accc2d822fbaac6428b&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201312%2F04%2F20131204184148_hhXUT.jpeg" title="哈哈哈" />
+    <a href="#ss"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a href="https://www.baidu.com" target="_blank"> 哈哈哈 </a><br/>
+    <a id="ss" href="https://www.baidu.com"> 哈哈哈 </a><br/>
 
 
-<table>
-    <tr>
-        <th>标题</th>
-        <th>标题</th>
-        <th>标题</th>
-        <th>标题</th>
-        <th>标题</th>
-    </tr>
-    <tr>
-        <td>哈哈哈</td>
-        <td>哈哈哈</td>
-        <td>哈哈哈</td>
-        <td>哈哈哈</td>
-        <td>哈哈哈</td>
-    </tr>
-    <tr>
-        <td>哈哈哈1</td>
-        <td>哈哈哈1</td>
-        <td>哈哈哈1</td>
-        <td>哈哈哈1</td>
-        <td>哈哈哈1</td>
-    </tr>
-</table>
+    <table>
+        <tr>
+            <th>标题</th>
+            <th>标题</th>
+            <th>标题</th>
+            <th>标题</th>
+            <th>标题</th>
+        </tr>
+        <tr>
+            <td>哈哈哈</td>
+            <td>哈哈哈</td>
+            <td>哈哈哈</td>
+            <td>哈哈哈</td>
+            <td>哈哈哈</td>
+        </tr>
+        <tr>
+            <td>哈哈哈1</td>
+            <td>哈哈哈1</td>
+            <td>哈哈哈1</td>
+            <td>哈哈哈1</td>
+            <td>哈哈哈1</td>
+        </tr>
+    </table>
+
+    <form action="login.html">
+        用户名： <input type="text" name="username" id="">
+        <input type="submit" value="提交">
+    </form>
+
+
+
+    <script>
+        var ele = document.createElement('div');
+        ele.setAttribute('class', 'adddiv');
+
+        var father = document.querySelector('#boddy')
+        father.appendChild(ele)
+    </script>
 </body>
 
 </html>
