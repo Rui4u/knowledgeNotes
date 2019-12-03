@@ -1,0 +1,51 @@
+header {
+  width: 100%;
+  height: 260px;
+  background: url(../img/loginheader.png) no-repeat;
+  background-size: 100%;
+}
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+  background-color: yellowgreen;
+  align-items: center;
+}
+.login ul {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: top;
+}
+.login ul li {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.login ul label {
+  width: 35%;
+  text-align: right;
+  margin-right: 10px;
+}
+.subBtn {
+  width: 210px;
+  height: 40px;
+  background-color: pink;
+  margin: auto;
+}
+.subBtn input {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: url(../img/loginfooter.png) no-repeat;
+  background-size: 100%;
+}
