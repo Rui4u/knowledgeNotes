@@ -1,4 +1,5 @@
 /*定义标签*/
+
 tr {
     height: 40px;
 }
@@ -6,15 +7,22 @@ tr {
 .red {
     color: orangered;
 }
+
+
 /*定义class*/
+
 .font {
     font-size: 12px;
 }
+
+
 /*定义id*/
+
 #customId {
     font-size: 12px;
     font: italic 700 20px "微软雅黑";
 }
+
 a {
     text-decoration: none;
 }

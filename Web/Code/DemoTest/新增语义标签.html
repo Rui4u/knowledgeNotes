@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header,
+        nav,
+        section {
+            display: block;
+            width: 100%;
+            height: 120px;
+            background-color: pink;
+            margin: 10px;
+        }
+        
+        button {
+            cursor: pointer;
+        }
+        
+        button[disabled] {
+            cursor: default;
+        }
+        /* 以icon开头的 */
+        
+        div[class^="icon"] {}
+        
+        div[class$="icon"] {}
+        
+        div[class*="icon"] {}
+    </style>
+</head>
+
+<body>
+
+    <header></header>
+    <header></header>
+    <nav></nav>
+
+    <audio controls="controls">
+        <!-- 看看是否支持MP3 如果支持不走下一个 -->
+        <source src="" type="audio/mpeg" />
+        <source src="" type="audio/ogg" />
+        <!-- 浏览器不支持 -->
+    </audio>
+
+    <button disabled="disabled">  测试按钮 </button>
+    <button>  测试按钮 </button>
+
+    <div class="icon1"></div>
+    <div class="icon2"></div>
+    <div class="icon3"></div>
+    <div class="ico1"></div>
+</body>
+
+</html>
