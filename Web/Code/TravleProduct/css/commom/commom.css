@@ -1,6 +1,7 @@
 body {
     position: relative;
-    background: url(../../img/commom/common_bg.png);
+    background: url(../../img/commom/common_bg.png) repeat-y;
+    background-size: 100%;
     padding-top: 200px;
 }
 
