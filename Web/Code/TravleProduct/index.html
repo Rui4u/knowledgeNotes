@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <script src="js/animate.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script type='application/javascript' src='js/fastclick.js'></script>
+
+    <title>Document</title>
+
+
+    <style>
+        .back {
+            width: 100px;
+            height: 800px;
+            background-color: red;
+        }
+        
+        .testBox {
+            position: absolute;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="back"></div>
+
+    <div class="focus">
+        <a href="javascript:;" class="arrow-l"> 左 </a>
+        <a href="javascript:;" class="arrow-r"> 右 </a>
+        <!-- 滚动区域 -->
+        <ul>
+            <li>
+                <a href="javascript:;"><img src="upload/focus.png" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="upload/focus-2.png" alt=""></a>
+            </li>
+        </ul>
+        <ol class="circle">
+
+        </ol>
+    </div>
+
+
+    <script>
+        var back = document.querySelector('.back');
+        back.addEventListener('touchstart', function() {
+            window.scroll(0, 0);
+        });
+    </script>
+
+
+    <div class="testBox">
+
+    </div>
+
+    <script>
+        var back = document.querySelector('.testBox');
+        var startX = 0;
+        var startY = 0;
+        var x = 0;
+        var y = 0;
+        back.addEventListener('touchstart', function(e) {
+            startX = e.targetTouches[0].pageX;
+            startY = e.targetTouches[0].pageY;
+            x = this.offsetLeft;
+            y = this.offsetTop;
+        });
+
+        back.addEventListener('touchmove', function(e) {
+            console.log("123");
+            console.log(e);
+            var moveX = e.targetTouches[0].pageX - startX;
+            var moveY = e.targetTouches[0].pageY - startY;
+
+            console.log(x + moveX);
+            console.log(x + moveY);
+            this.style.left = x + moveX + 'px';
+            this.style.top = y + moveY + 'px';
+            e.preventDefault();
+        });
+
+
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+            back.addEventListener('click', function() {
+                alert(11);
+            })
+        }
+    </script>
+</body>
+
+</html>

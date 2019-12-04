@@ -7,6 +7,14 @@ button {
     border: 0px;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 input {
     background: none;
     outline: none;

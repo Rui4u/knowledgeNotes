@@ -1,0 +1,68 @@
+.focus {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: pink;
+    overflow: hidden;
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    background-color: red;
+}
+
+.focus ul li {
+    float: left;
+    background-color: palegoldenrod;
+}
+
+.focus ul li img {
+    width: 400px;
+    height: 200px;
+    vertical-align: top;
+}
+
+.arrow-l,
+.arrow-r {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background: red;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.arrow-r {
+    right: 0;
+}
+
+.circle {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    margin: auto;
+    height: 20px;
+    background: rosybrown;
+}
+
+.circle li {
+    width: 15px;
+    height: 15px;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+
+.circle .current {
+    background: red;
+}
