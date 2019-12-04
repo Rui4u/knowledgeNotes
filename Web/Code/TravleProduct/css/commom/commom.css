@@ -1,0 +1,138 @@
+body {
+    position: relative;
+    background: url(../../img/commom/common_bg.png);
+    padding-top: 200px;
+}
+
+.root {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.root .conmonHeader,
+.root .commonFooter {
+    position: fixed;
+    width: 100%;
+    max-width: 800px;
+    height: 220px;
+}
+
+.root .conmonHeaderRight,
+.root .conmonHeaderLeft {
+    display: flex;
+    justify-content: center;
+    top: 0;
+}
+
+.root .conmonHeaderRight {
+    background: url(../../img/commom/common_decoration_right.png) no-repeat;
+    background-size: 100%;
+    background-position-y: 0;
+}
+
+.root .conmonHeaderLeft {
+    background: url(../../img/commom/common_decoration_left.png) no-repeat;
+    background-size: 100%;
+    background-position-y: 0;
+}
+
+.conmonHeader .slogan {
+    width: 200px;
+    height: 89.63px;
+    background: url(../../img/commom/slogan.png) no-repeat;
+    background-size: 100%;
+    padding-bottom: 20px;
+    align-self: flex-end;
+}
+
+.conmonHeader .login1 {
+    position: absolute;
+    width: 90px;
+    height: 27.67px;
+    background: url(../../img/commom/commom-logo1.png) no-repeat;
+    background-size: 100%;
+    top: 35px;
+}
+
+.conmonHeader .login1Left {
+    left: 10px;
+}
+
+.conmonHeader .login1Right {
+    right: 10px;
+}
+
+.conmonHeader .login2 {
+    position: absolute;
+    width: 45px;
+    height: 35px;
+    background: url(../../img/commom/commom-logo2.png) no-repeat;
+    background-size: 100%;
+    top: 15px;
+}
+
+.conmonHeader .login2Left {
+    left: 10px;
+}
+
+.conmonHeader .login2Right {
+    right: 10px;
+}
+
+.commonFooter {
+    bottom: 0;
+    background-position-y: bottom;
+    z-index: -1;
+}
+
+.commonFooter .decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.commonFooter .decorationLeft {
+    background: url(../../img/commom/common_decoration_left.png) no-repeat;
+    background-size: 100%;
+    background-position-y: bottom;
+}
+
+.commonFooter .decorationRight {
+    background: url(../../img/commom/common_decoration_right.png) no-repeat;
+    background-size: 100%;
+    background-position-y: bottom;
+}
+
+.commonFooter .buliding {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background: url(../../img/commom/commom-bottom-bg1.png) no-repeat;
+    background-size: 100%;
+}
+
+.commonFooter .bulidingRight {
+    bottom: 0;
+    right: 0;
+}
+
+.commonFooter .bulidingLeft {
+    bottom: 0;
+    left: 0;
+}
+
+.commonFooter .mascot {
+    position: absolute;
+    width: 126px;
+    height: 113.05px;
+    background: url(../../img/commom/common_mascot.png) no-repeat;
+    background-size: 100%;
+    bottom: 0px;
+}
+
+.root .Seciton {
+    position: relative;
+    width: 100%;
+}
