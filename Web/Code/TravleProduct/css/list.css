@@ -75,7 +75,7 @@ body {
 }
 .root .listSeciton .contains {
   padding-top: 200px;
-  width: 375px;
+  width: 320px;
   height: 300px;
   margin: auto;
 }
@@ -102,9 +102,9 @@ body {
 }
 .root .listSeciton .contains > div span div img {
   position: relative;
-  width: 45px;
-  height: 37px;
-  left: 24px;
+  width: 40px;
+  height: 30px;
+  left: 20px;
   top: 20px;
 }
 .root .listSeciton .contains > div span label {
