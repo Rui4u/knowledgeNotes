@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="css/commom/commom.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/fastclick.js"></script>
     <script src="js/jquery-mini-js"></script>
 
     <title>登录</title>
@@ -82,11 +83,13 @@
                 $('.login').show();
             }
 
+            $('.loginByOther').empty();
             var domLoginByOthrer = $('.loginByOther')[0];
             var name = "名字";
             var sex = "性别";
             var title = "标题";
-            domLoginByOthrer.innerHTML = "<label for=\"\" class=\"text\" style=\"font-size: 34px;line-height: 34px;\">" + title + "</label><span style=\"margin-top: 10px;\"><label for=\"\" class = \"text\" style=\"font-size: 40px;line-height: 40px;\">" + name + "</label><label for=\"\" class = \"text\" style=\"font-size: 28px;line-height: 28px;\">" + sex + "</label></span>"
+            domLoginByOthrer.innerHTML = '<label for="" class="text" style="font-size: 34px;line-height: 34px;">' + title + '</label><span style="margin-top: 10px;"><label for="" class = "text" style="font-size: 40px;line-height: 40px;">' + name + '</label><label for="" class = "text" style="font-size: 28px;line-height: 28px;">' + sex + '</label>'
+
         })
     </script>
 </body>
