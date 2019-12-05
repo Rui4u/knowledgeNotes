@@ -1,68 +1,74 @@
+.loginByOther {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 200px;
+  align-items: center;
+  margin: auto;
+}
 .login {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 260px;
-    height: 200px;
-    align-items: center;
-    margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 260px;
+  height: 200px;
+  align-items: center;
+  margin: auto;
 }
-
 .login ul {
-    display: flex;
-    width: 100%;
-    height: 70px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: top;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: top;
 }
-
 .login ul li {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-bottom: 10px;
-    align-items: center;
-    height: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 10px;
+  align-items: center;
+  height: 30px;
 }
-
 .login ul label {
-    height: 22px;
-    width: 60px;
-    text-align: right;
-    margin-right: 10px;
+  height: 22px;
+  width: 60px;
+  text-align: right;
+  margin-right: 10px;
 }
-
 .login ul input {
-    width: 155.3px;
-    height: 30px;
-    background: url(../img/login-text-bg.png) no-repeat;
-    background-size: 100%;
-    border: 0px;
-    padding: 0px 10px;
+  width: 155.3px;
+  height: 30px;
+  background: url(../img/login-text-bg.png) no-repeat;
+  background-size: 100%;
+  border: 0px;
+  padding: 0px 10px;
 }
-
+.loginSection {
+  position: relative;
+  width: 260px;
+  height: 230px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .subBtn {
-    width: 201.39px;
-    height: 30px;
-    margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 201.39px;
+  height: 30px;
+  transform: translateX(-50%);
 }
-
 .subBtn button {
-    width: 100%;
-    height: 100%;
-    background: url(../img/login-button.png) no-repeat;
-    background-size: 100%;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    min-width: 375px;
-    height: 245.25px;
-    background: url(../img/login-footer.png) no-repeat;
-    background-size: 100%;
-    background-position: right;
-    z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url(../img/login-button.png) no-repeat;
+  background-size: 100%;
 }

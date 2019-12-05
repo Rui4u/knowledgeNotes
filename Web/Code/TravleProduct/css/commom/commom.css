@@ -27,9 +27,26 @@ html {
 
 body {
     position: relative;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body>.bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background: url(../../img/commom/common_bg.png) repeat-y;
     background-size: 100%;
-    padding-top: 200px;
+}
+
+.topMargin {
+    width: 100%;
+    height: 200px;
 }
 
 .root {
@@ -135,9 +152,10 @@ body {
 
 .commonFooter .buliding {
     position: absolute;
-    width: 70%;
-    height: 70%;
+    width: 200px;
+    height: 114px;
     background: url(../../img/commom/commom-bottom-bg1.png) no-repeat;
+    background-position-y: bottom;
     background-size: 100%;
 }
 
@@ -157,6 +175,7 @@ body {
     height: 113.05px;
     background: url(../../img/commom/common_mascot.png) no-repeat;
     background-size: 100%;
+    background-position-y: bottom;
     bottom: 0px;
 }
 

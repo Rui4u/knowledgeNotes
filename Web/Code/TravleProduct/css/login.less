@@ -1,19 +1,17 @@
-header {
+.loginByOther {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 257.4px;
-    background: url(../img/login-header.png) no-repeat;
-    background-size: 100%;
-
-    .slogan {
-        width: 200px;
-        height: 89.63px;
-        background: url(../img/slogan.png) no-repeat;
-        background-size: 100%;
-        align-self: flex-end;
-    }
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 200px;
+    align-items: center;
+    margin: auto;
 }
+
 .login {
     display: flex;
     flex-wrap: wrap;
@@ -57,27 +55,25 @@ header {
         
     }
 }
-
+.loginSection {
+    position: relative;
+    width: 260px;
+    height: 230px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .subBtn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
     width: 201.39px;
     height: 30px;
-    margin: auto;
+    transform: translateX(-50%);
     button {
         width: 100%;
         height: 100%;
         background: url(../img/login-button.png) no-repeat;
         background-size: 100%;
     }
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    min-width: 375px;
-    height: 245.25px;
-    background: url(../img/login-footer.png) no-repeat;
-    background-size: 100%;
-    background-position: right;
-    z-index: -1;
 }
