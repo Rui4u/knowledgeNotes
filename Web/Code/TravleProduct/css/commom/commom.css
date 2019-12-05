@@ -42,6 +42,7 @@ body>.bg {
     height: 100%;
     background: url(../../img/commom/common_bg.png) repeat-y;
     background-size: 100%;
+    z-index: -3;
 }
 
 .topMargin {
