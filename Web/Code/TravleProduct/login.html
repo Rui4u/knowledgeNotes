@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/login.css">
     <script src="js/fastclick.js"></script>
     <script src="js/jquery-mini-js"></script>
+    <script src="./js/vue.js"></script>
 
     <title>登录</title>
 </head>
@@ -29,37 +30,38 @@
     <div class="bg"></div>
     <div class="topMargin"></div>
     <div class="root">
+
         <header class="conmonHeader conmonHeaderLeft">
             <div class="slogan slogan"></div>
             <div class="login1 login1Right"></div>
             <div class="login2 login2Left"></div>
         </header>
-        <section class="Seciton">
+        <section class="Seciton" id="loginMainInfo">
             <div class="loginSection">
                 <form action="list.html">
                     <div class="login">
                         <ul>
                             <li>
                                 <label for="">姓　名:</label>
-                                <input type="text" name="userName" placeholder="请输入姓名">
+                                <input type="text" name="userName" placeholder="请输入姓名" v-model='name'>
                             </li>
                             <li>
                                 <label for="">手机号:</label>
-                                <input type="text" name="mobileNo" placeholder="请输入手机号">
+                                <input type="text" name="mobileNo" placeholder="请输入手机号" v-model='phone'>
                             </li>
                         </ul>
                     </div>
-                    <div class="loginByOther ">
-                        <!-- <label for="" class="text" style="font-size: 34px;line-height: 34px;">欢迎尚赫贵宾</label>
+                    <div class="loginByOther " v-cloak>
+
+                        <label for="" class="text" style="font-size: 34px;line-height: 34px; " v-text='title'></label>
 
                         <span style="margin-top: 10px;">
-                                <label for="" class = "text" style="font-size: 40px;line-height: 40px;">王芳</label>
-                                <label for="" class = "text" style="font-size: 28px;line-height: 28px;">女士</label>
-                        </span> -->
-
+                                <label for="" class = "text" style="font-size: 40px;line-height: 40px;" v-text='name'></label>
+                                <label for="" class = "text" style="font-size: 28px;line-height: 28px;" v-text='sex'></label>
+                        </span>
                     </div>
                     <div class="subBtn">
-                        <button type="submit" value=""></button>
+                        <button type="button" value="" v-on:click="handleSubmit"></button>
 
                     </div>
                 </form>
@@ -83,14 +85,30 @@
                 $('.login').show();
             }
 
-            $('.loginByOther').empty();
-            var domLoginByOthrer = $('.loginByOther')[0];
-            var name = "名字";
-            var sex = "性别";
-            var title = "标题";
-            domLoginByOthrer.innerHTML = '<label for="" class="text" style="font-size: 34px;line-height: 34px;">' + title + '</label><span style="margin-top: 10px;"><label for="" class = "text" style="font-size: 40px;line-height: 40px;">' + name + '</label><label for="" class = "text" style="font-size: 28px;line-height: 28px;">' + sex + '</label>'
+        });
 
-        })
+        var vm = new Vue({
+            el: '.loginByOther',
+            data: {
+                title: 'helloVuew',
+                name: '名字',
+                sex: '性别'
+            }
+        });
+
+        var vm2 = new Vue({
+            el: '#loginMainInfo',
+            data: {
+                name: '',
+                phone: ''
+            },
+            methods: {
+                handleSubmit: function() {
+                    var string = this.name + '呵呵' + this.phone;
+                    alert(string);
+                }
+            }
+        });
     </script>
 </body>
 
