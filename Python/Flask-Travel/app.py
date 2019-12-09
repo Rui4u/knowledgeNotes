@@ -44,13 +44,16 @@ class Flights(db.Model):
     departure_city = db.Column(db.String(16))
     arrival_city = db.Column(db.String(16))
     # 状态 1 已完成 0 待出发
-    flight_status = db.Column(db.Integer)
+    flight_status = db.Column(db.String(16))
     # 团队出发  团队返回
     flight_type = db.Column(db.String(16))
     # 航班名称
     flight_name = db.Column(db.String(16))
     # 行李规定
     flight_luggage_rules = db.Column(db.String(16))
+
+    flight_time = db.Column(db.String(16))
+
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __repr__(self):
@@ -81,9 +84,10 @@ def login():
 
 @app.route('/flight')
 def flight():
-    id = request.args.get("id") or ''
+    id = request.args.get("id") or 0
+    if isinstance(id, str):
+        id = int(id)
     print(id)
-
     json = backjson(findFlights(id))
     return json
 
@@ -104,7 +108,16 @@ def backjson(resp):
     req_status = api_request_type.failure
     message = ''
 
-    if isinstance(resp, db.Model):
+    print(type(resp))
+
+    if isinstance(resp, list):
+        resp_array = []
+        for item in resp:
+            resp_array.append(serialize(item))
+        data = resp_array
+        req_status = api_request_type.successed
+
+    elif isinstance(resp, db.Model):
         data = serialize(resp)
         req_status = api_request_type.successed
     elif type(resp)is dict:
@@ -150,9 +163,10 @@ def initdb():
     # 创建
     add(name='王0', sex='男', phone=12222222222)
     add(name='王1', sex='女', phone=13333333333)
-    user = find(name='王0')
+    user = find(id=1)
+    print(user)
     addFlights(flight_name='阿联酋航空EK309',
-               flight_status=0,
+               flight_status='未出行',
                flight_type='团队出发',
                flight_luggage_rules='行李规则',
                departure_city='北京首都T2',
@@ -161,15 +175,15 @@ def initdb():
                arrival_city='迪拜T3',
                arrival_date='2019/04/04',
                arrival_time='11:35',
+               flight_time='7h30m',
                user_id=user.id)
-    user = find(name='王0')
-    print('--')
     flight = user.flight[0]
     q_dict = serialize(flight)
     q_json = jsonify(q_dict)
     str1 = 'q_dict = %s \n q_json = %s' % (q_dict, q_json)
     print(str1)
     print('--')
+
 
     return q_json
 
@@ -184,6 +198,7 @@ def addFlights(flight_name,
                arrival_time=None,
                departure_city=None,
                arrival_city=None,
+               flight_time=None,
                user_id=None
                ):
     if len(flight_name):
@@ -199,6 +214,7 @@ def addFlights(flight_name,
                              arrival_city=arrival_city,
                              arrival_date=arrival_date,
                              arrival_time=arrival_time,
+                             flight_time=flight_time,
                              user_id=user_id
                              )
             db.session.add(flight)
@@ -230,9 +246,8 @@ def add(name, sex=None, phone=None):
         print('名字为空')
 
 
-def find(name=None, phone=None, id=None):
-
-    if len(id) > 0 & int(id) > 0:
+def find(name='', phone='', id=0):
+    if id > 0:
         try:
             user = User.query.filter_by(id=id).first()
             print(user.id)
@@ -242,7 +257,7 @@ def find(name=None, phone=None, id=None):
             print(e)
             db.session.rollback()
             return api_request_type.user_cant_find_by_id
-    elif len(name) > 0 and len(phone) > 0 :
+    elif len(name) > 0 and len(phone) > 0:
         try:
             user = User.query.filter_by(phone=phone).filter_by(name=name).first()
             print(user.id)
@@ -258,10 +273,14 @@ def find(name=None, phone=None, id=None):
 
 
 def findFlights(id):
-    if(len(id) > 0):
+    if id > 0:
         try:
-            flight = Flights.query.filter_by(user_id=id).first()
-            return flight
+            flights = Flights.query.filter_by(user_id=id)
+            flight_array = []
+
+            for flight in flights:
+                flight_array.append(flight)
+            return flight_array
 
         except Exception as e:
             print(e)
