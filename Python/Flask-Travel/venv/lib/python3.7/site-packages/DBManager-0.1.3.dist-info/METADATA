@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: DBManager
+Version: 0.1.3
+Summary: Make Database Managing easier!
+Home-page: https://github.com/LeCuay/DBManager.py
+Author: LeCuay
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+
+# DBManager.py
+
+[![PyVersion](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/)
+
+A library for Database Management that makes our development easier.
+
+## Compatibility
+
+This module supports connections with **MySQL**, **PostgreSQL**, **SQL Server** and **SQLite3**.
+
+## Features
+
+The module manage almost everything by itself, this means Opening/Closing connections, cursors and managing of Commits.  
+Some of its features are:
+
+* `execute(sql)`: Executes either an SQL sentence or a *.sql* file. It also can return values from a *SELECT*.
+* `select(table, columns, condition, order)`: This method will return a list of selected values or just a value if *ResultSet* turns out to be just one.
+* `insert(table, values)`: Inserts values into a table by the folowwing syntax: `insert("test", id=12, name="LeCuay", money=32.12)`.
+* `update(table, condition, sets)`: Updates rows by the following syntax: `update("test", "name like '%Cuai%'", name="LeCuay", id=1, money=122.53)`.
+* `create_table(table, values)`: Creates a table with the params in `values` by the following syntax: `create_table("test", id="INTEGER PRIMARY KEY", name="VARCHAR(255)"`.
+* `create_database(dbname)`: Manage the creation of a Database and its Isolation levels.
+* `callproc(name, params)`: Calls a stored procedure from the Database.
+
+## To-do List
+
+* [ ] Add compatibility with OracleDB.
+* [ ] Add compatibility with MongoDB.
+* [ ] Add more specific features for each Connection.
+
