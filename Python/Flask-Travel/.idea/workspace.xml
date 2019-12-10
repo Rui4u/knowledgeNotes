@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7da6de6-60b8-4903-b756-4e86e801aecf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DBServer/Flight.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBServer/Manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBServer/User.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBServer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Error/ErrorCode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Error/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/DataTools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +70,7 @@
       <updated>1575769733606</updated>
       <workItem from="1575769734936" duration="14933000" />
       <workItem from="1575803862258" duration="933000" />
-      <workItem from="1575859293143" duration="18774000" />
+      <workItem from="1575859293143" duration="22443000" />
     </task>
     <servers />
   </component>
