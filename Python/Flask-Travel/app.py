@@ -6,7 +6,7 @@ from flask import request
 
 from DBServer.Manager import *
 from Tools.DataTools import *
-from DBServer.User import find
+from DBServer.User import UserTools
 from DBServer.Flight import findFlights
 
 app = Flask(__name__)
@@ -26,14 +26,16 @@ def hello_world():
 
 @app.route('/login')
 def login():
-    id = request.args.get("id") or ''
+    user_id = request.args.get("id") or ''
     phone = request.args.get("phone") or ''
     name = request.args.get("name") or ''
-    print(id)
+    print(user_id)
     print(phone)
     print(name)
-
-    json = backjson(serialize(find(id=id, phone=phone, name=name)))
+    user_tools = UserTools()
+    user = user_tools.find(name, phone, user_id)
+    print(user)
+    json = backjson(serialize(user))
     return json
 
 

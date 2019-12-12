@@ -24,17 +24,22 @@ def initDB(app):
 
 @manager.route('/initdb', methods=['GET'])
 def initdb():
-    from DBServer.User import add, find
-    from DBServer.Flight import addFlights
+    from DBServer.User import UserTools
+    from DBServer.Flight import addFlights, findFlights
+    from DBServer.Relationship import add_relationship
     print(db)
     # 全部删除
     db.drop_all()
-    # 创建
-    add(name='王0', sex='男', phone=12222222222)
-    add(name='王1', sex='女', phone=13333333333)
-    user = find(id=1)
+
+    user_Tools = UserTools()
+
+    #创建
+    user_Tools.add(user_id='0001', name='王0', sex='男', phone=12222222222)
+    user_Tools.add(user_id='0002', name='王1', sex='女', phone=13333333333)
+    user = user_Tools.find(user_id='0001')
     print(user)
-    addFlights(flight_name='阿联酋航空EK309',
+    addFlights(flight_id='0001',
+               flight_name='阿联酋航空EK309',
                flight_status='未出行',
                flight_type='团队出发',
                flight_luggage_rules='行李规则',
@@ -44,16 +49,17 @@ def initdb():
                arrival_city='迪拜T3',
                arrival_date='2019/04/04',
                arrival_time='11:35',
-               flight_time='7h30m',
-               user_id=user.id)
-    flight = user.flight[0]
-    q_dict = serialize(flight)
-    q_json = jsonify(q_dict)
-    str1 = 'q_dict = %s \n q_json = %s' % (q_dict, q_json)
-    print(str1)
-    print('--')
+               flight_time='7h30m')
 
-    return q_json
+    add_relationship(user_id='0001', flights='0001')
+    # flight = findFlights()
+    # q_dict = serialize(flight)
+    # q_json = jsonify(q_dict)
+    # str1 = 'q_dict = %s \n q_json = %s' % (q_dict, q_json)
+    # print(str1)
+    # print('--')
+
+    return 'q_json'
 
 
 

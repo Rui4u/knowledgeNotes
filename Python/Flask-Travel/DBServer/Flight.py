@@ -4,7 +4,7 @@ from Tools.DataTools import *
 
 class Flights(db.Model):
     __tablename__ = 'flights'
-    id = db.Column(db.Integer, primary_key=True)
+    flight_id = db.Column(db.String(16), primary_key=True)
     departure_date = db.Column(db.String(16))
     arrival_date = db.Column(db.String(16))
     departure_time = db.Column(db.String(16))
@@ -22,16 +22,14 @@ class Flights(db.Model):
 
     flight_time = db.Column(db.String(16))
 
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-
     def __repr__(self):
         return 'User:%s ' % self.flight_name
 
 
-def findFlights(id):
-    if id > 0:
+def findFlights(flightId = ''):
+    if len(flightId) > 0:
         try:
-            flights = Flights.query.filter_by(user_id=id)
+            flights = Flights.query.filter_by(flightId=flightId)
             flight_array = []
 
             for flight in flights:
@@ -46,7 +44,9 @@ def findFlights(id):
         return '参数出错'
 
 
-def addFlights(flight_name,
+def addFlights(
+               flight_id,
+               flight_name,
                flight_status=None,
                flight_type=None,
                flight_luggage_rules=None,
@@ -57,12 +57,13 @@ def addFlights(flight_name,
                departure_city=None,
                arrival_city=None,
                flight_time=None,
-               user_id=None
                ):
-    if len(flight_name):
+    if len(flight_name) > 0 and len(flight_id) > 0:
         try:
             db.create_all()
-            flight = Flights(flight_name=flight_name,
+            flight = Flights(
+                             flight_id=flight_id,
+                             flight_name=flight_name,
                              flight_status=flight_status,
                              flight_type=flight_type,
                              flight_luggage_rules=flight_luggage_rules,
@@ -73,7 +74,6 @@ def addFlights(flight_name,
                              arrival_date=arrival_date,
                              arrival_time=arrival_time,
                              flight_time=flight_time,
-                             user_id=user_id
                              )
             db.session.add(flight)
 
@@ -84,5 +84,5 @@ def addFlights(flight_name,
             print('增加航空信息出错')
             db.session.rollback()
     else:
-        print('名字为空')
+        print('名字为空 或者航班 id为空')
 
