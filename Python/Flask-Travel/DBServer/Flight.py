@@ -34,6 +34,8 @@ def findFlights(flightId = ''):
 
             for flight in flights:
                 flight_array.append(flight)
+
+            print('查找航班成功')
             return flight_array
 
         except Exception as e:
@@ -78,7 +80,7 @@ def addFlights(
             db.session.add(flight)
 
             db.session.commit()
-
+            print('增加航空信息成功')
         except Exception as e:
             print(e)
             print('增加航空信息出错')
