@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7da6de6-60b8-4903-b756-4e86e801aecf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TravelMain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TravelMain/api_1_0/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TravelMain/api_1_0/demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,6 +114,7 @@
       <workItem from="1576235007502" duration="838000" />
       <workItem from="1576235874769" duration="951000" />
       <workItem from="1576236840799" duration="1387000" />
+      <workItem from="1576463003896" duration="4425000" />
     </task>
     <servers />
   </component>
